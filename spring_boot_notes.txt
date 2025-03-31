@@ -1,6 +1,37 @@
-Spring boot master class
+Spring boot master class (Java 11 + Maven 3+ + MySql)
     1. W's of Spring FrameWork
         1. What is Spring FrameWork ?
+            -> why frameworks ?
+                -> java gives us a lot of features and advantages to build the application,
+                    but when we are trying to build huge enterprise or bussiness applications,
+                    we need to concentrate more on the business logic, at the time we don't want
+                    to work with the basic boilerplate codes or basic cross-cutiing concerns, so
+                    we'll be doing many things like security, logging, configurations, batch
+                    processing and scheduling etc,. if we do all these things with java without
+                    using any FW takes lot of time. So FW's comes into the picture at that time
+                -> FW's are provide a lot of basic structure, basic functionalities that we can
+                    work upon and we can mainly concentrate on our bussiness implementation.
+            -> spring gives us logging, security,dependency injection,scheduling,bash processing etc,.
+            -> it's also called framework of frameworks.
+            -> Features of Spring FW
+                -> Inversion of Control
+                    -> it means giving control to the framework itslef
+                    -> we don't have to create every objects by yourself, if we 1000's of
+                        classes then giving control to the fw saves your time to write
+                        business logic.
+                    -> to do IC spring allows the DI
+                -> Dependency Injection
+                    -> To give the dependencies of different classes to the different classes
+                -> Aspect Oriented Programming
+                    -> AOP used for tackle down the cross-cutting concerns
+                    -> In application, we do lot of things repeatedly like logging to
+                       the user data, doing security, etc,. we solve by this.
+                -> MVC
+                    -> used for build web applications
+                -> JDBC
+                    -> used to work with database
+                -> Hibernate
+            -> these features make spring as framework of frameworks.
         2. Advantages of Spring
         3. Life cycle of Bean
         4. Dependency Injection
@@ -21,3 +52,4 @@ Spring boot master class
         1. Implementing Spring Security
         2. OAuth 2.0 and OpenId Connect
         3. Complete Login Flow
+

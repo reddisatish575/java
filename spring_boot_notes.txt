@@ -1,0 +1,23 @@
+Spring boot master class
+    1. W's of Spring FrameWork
+        1. What is Spring FrameWork ?
+        2. Advantages of Spring
+        3. Life cycle of Bean
+        4. Dependency Injection
+        5. Spring AOP
+    2. All of Spring Boot
+        1. What is Spring Boot
+        2. Features and Advantages
+        3. Building REST APIs
+        4. Unit Testing (Junit and Mockito)
+    3. REST APIs
+    4. Junit and Mockito
+    5. Spring Data
+        1. What is JPA
+        2. Using Spring Data JPA
+        3. Hibernate
+        4. Entity Relationships
+    4. Spring Security
+        1. Implementing Spring Security
+        2. OAuth 2.0 and OpenId Connect
+        3. Complete Login Flow

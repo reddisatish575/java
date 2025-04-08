@@ -1,0 +1,140 @@
+Spring boot master class (Java 11 + Maven 3+ + MySql)
+    1. W's of Spring FrameWork
+        1. What is Spring FrameWork ?
+            -> why frameworks ?
+                -> java gives us a lot of features and advantages to build the application,
+                    but when we are trying to build huge enterprise or bussiness applications,
+                    we need to concentrate more on the business logic, at the time we don't want
+                    to work with the basic boilerplate codes or basic cross-cutiing concerns, so
+                    we'll be doing many things like security, logging, configurations, batch
+                    processing and scheduling etc,. if we do all these things with java without
+                    using any FW takes lot of time. So FW's comes into the picture at that time
+                -> FW's are provide a lot of basic structure, basic functionalities that we can
+                    work upon and we can mainly concentrate on our bussiness implementation.
+            -> spring gives us logging, security,dependency injection,scheduling,bash processing etc,.
+            -> it's also called framework of frameworks.
+            -> Features of Spring FW
+                -> Inversion of Control
+                    -> it means giving control to the framework itself
+                    -> we don't have to create every objects by yourself, if we 1000's of
+                        classes then giving control to the fw saves your time to write
+                        business logic.
+                    -> to do IC spring allows the DI
+                -> Dependency Injection
+                    -> To give the dependencies of different classes to the different classes
+                -> Aspect Oriented Programming
+                    -> AOP used for tackle down the cross-cutting concerns
+                    -> In application, we do lot of things repeatedly like logging to
+                       the user data, doing security, etc,. we solve by this.
+                -> MVC
+                    -> used for build web applications
+                -> JDBC
+                    -> used to work with database
+                -> Hibernate
+            -> these features make spring as framework of frameworks.
+        2. Advantages of Spring
+        3. Life cycle of Bean
+        4. Dependency Injection
+        5. Spring AOP
+    2. All of Spring Boot
+        1. What is Spring Boot
+            -> it is an extension of spring fw
+        2. Features and Advantages
+            -> Rapid application Development
+            -> managing a lot of dependencies
+            -> provides starter templates to store all the dependencies
+            -> provides autoconfiguration
+        3. Building REST APIs
+        4. Unit Testing (Junit and Mockito)
+    3. REST APIs
+    4. Junit and Mockito
+    5. Spring Data
+        1. What is JPA
+        2. Using Spring Data JPA
+        3. Hibernate
+        4. Entity Relationships
+    4. Spring Security
+        1. Implementing Spring Security
+        2. OAuth 2.0 and OpenId Connect
+        3. Complete Login Flow
+
+-> by default spring tomcat server runs on port 8080 due to spring auto configuration,
+    but we can change the port in application.properties.
+-> REST API's ==> Service Layer (Business Layer) ==> Repository layer (Data access layer) ==> DB
+-> if we don't add version in the POM file, then the version would be same as spring boot starter parent version.
+-> http://localhost:8081/h2-console
+    -> used to run the h2 console db
+
+
+
+SpringBoot Annotations
+------------------------------------------------------------------------------------
+1. @SpringBootApplication
+    -> it is key annotation for our springboot application
+    -> Inside this we have @SpringBootConfiguration annotation
+2. @SpringBootConfiguration
+    -> it tells it is our main springboot configuration file.
+3. @EnableAutoConfiguration
+    ->
+4. @ComponentScan
+    -> It scans the complete components in our projects.
+5. @Component
+    -> For mentioned class, it will be added to the spring container
+6. @Controller
+    -> it is stereo type annotation, it means it is controller.
+7. @RestController
+    -> it is controller with returning the @ResponseBody
+8. @RequestMapping
+9. @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+10. @Entity
+    -> to create table
+11. @Id
+    -> to represent primary key
+12. @Autowired
+    -> reference will be created
+    -> used for property based dependency injection.
+13. @Repository
+    -> for fetching data from db by using queries
+14. @Service
+    -> used to tell it is service class
+15. @Data
+    -> Generates getters for all fields, a useful toString method,
+       and hashCode and equals implementations that check all non-transient fields.
+       Will also generate setters for all non-final fields, as well as a constructor
+       (except that no constructor will be generated if any explicitly written constructors already exist)
+16. @NoArgsConstructor
+    -> Generates a no-args constructor.
+       Will generate an error message if such a constructor cannot be written due to the existence of final fields.
+17. @AllArgsConstructor
+    -> Generates an all-args constructor.
+    -> An all-args constructor requires one argument for every field in the class.
+18. @Builder
+    -> used to generate builder pattern
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -65,6 +65,21 @@ Spring boot master class (Java 11 + Maven 3+ + MySql)
 -> http://localhost:8081/h2-console
     -> used to run the h2 console db
 
+-> yml files
+    -> used to write the configurations
+    -> easy to understand
+    -> reduce the configuration code by using common terms as parent.
+    -> so many technologies like docker, kubernetes use this yml configuration.
+-> when we have both .properties and .yml file, then priority goes to .properties
+-> we can create multiple profiles in single yml file
+-> we can deploy the jar file with specific profile by using below command
+    -> java -jar abc.jar --spring.profiles.active=prod
+
+Actuator
+    -> when we deploy our application, we have to monitor our application
+        -> what are the beans created ?
+        -> is my application healthy ?
+        -> memory utilization ?
 
 
 SpringBoot Annotations

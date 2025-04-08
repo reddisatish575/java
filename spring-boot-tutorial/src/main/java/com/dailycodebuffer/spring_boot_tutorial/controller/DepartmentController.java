@@ -18,6 +18,8 @@ public class DepartmentController {
 
     private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
 
+
+
     @PostMapping("/departments")
     public Department saveDepartment(@Valid @RequestBody Department department){
         LOGGER.info("Saving Department : {}", department);

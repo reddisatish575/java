@@ -1,0 +1,77 @@
+JPA Annotations
+
+1. @Table(name = "tbl_student")
+    -> used to create a new table
+    -> it always creates new table even table exists
+2. @Column(name = "col_name")
+    -> used to define specific column
+    -> it creates new columns and insert into the table
+3. @Id
+    -> used to represent primary key of the table.
+4.  @SequenceGenerator(
+               name = "student_sequence",
+               sequenceName = "student_sequence",
+               allocationSize = 1
+       )
+    -> used to generate specific sequence
+5.  @GeneratedValue(
+               strategy = GenerationType.SEQUENCE,
+               generator = "student_sequence"
+       )
+    -> used to generate the sequence of the @SequenceGenerator.
+6. @Table(
+           name = "tbl_student",
+           uniqueConstraints = @UniqueConstraint(
+                   name = "emailid_unique",
+                   columnNames = "email_address"
+           )
+    )
+    -> used to define unique columns
+7. @Column(
+           name = "email_address",
+           nullable = false
+       )
+   -> nullable is used to define whether the value can be null or not null
+   -> default is nullable is true.
+8. @Repository
+    -> used to represent the repository.
+9. extends JpaRepository<Student, Long>
+    -> JpaRepository has many inbuilt methods that we can use
+    -> First parameter is Table name
+    -> second parameter is primary key datatype of the Table.
+10. @SpringBootTest
+    -> it will store our values into the DB.
+    -> it will impact DB
+11. @DataJpaTest
+    -> help you to test your repo layer and once testing is done, the data will be flushed automatically.
+    -> it won't impact our DB.
+    -> it won't store our values into the DB.
+12. @Test
+    -> represent the test method.
+13. @Builder
+    -> used to create object with all the entity attributes.
+14. @Data
+    -> used for generating getters , setters
+15. @Entity
+    -> it represnts it is one table
+    -> if we use this annotation , primary id must mention.
+16. @Embeddable
+    -> used to embedd this class in another entity class
+17. @Embedded
+    -> used to take the attributes from mentioned entity class
+18. @AttributeOverrides({
+            @AttributeOverride(
+                    name = "name",
+                    column = @Column(name = "guardian_name")
+            ),
+            @AttributeOverride(
+                    name = "email",
+                    column = @Column(name = "guardian_email")
+            ),
+            @AttributeOverride(
+                    name = "mobileNumber",
+                    column = @Column(name = "guardian_mobile")
+            )
+    })
+
+    -> used to map the columns with DB.

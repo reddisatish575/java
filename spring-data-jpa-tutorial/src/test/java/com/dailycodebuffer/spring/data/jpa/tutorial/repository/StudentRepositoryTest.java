@@ -70,5 +70,42 @@ class StudentRepositoryTest {
         System.out.println("Students : " + students);
     }
 
+    @Test
+    public void printStudentByFirstNameContaining(){
+        List<Student> students = studentRepository.findByFirstNameContaining("q");
+
+        LOGGER.info("Students : " + students);
+        System.out.println("Students : " + students);
+    }
+
+    @Test
+    public void printStudentByEmailAddress(){
+        Student students = studentRepository.getStudentByEmailAddress("qwe@gmail.com");
+
+        LOGGER.info("Students : " + students);
+        System.out.println("Students : " + students);
+    }
+
+    @Test
+    public void printStudentByEmailAddressNative(){
+        Student students = studentRepository.getStudentByEmailAddressNative("qwe@gmail.com");
+
+        LOGGER.info("Students : " + students);
+        System.out.println("Students : " + students);
+    }
+
+    @Test
+    public void printStudentByEmailAddressNativeNamedParam(){
+        Student students = studentRepository.getStudentByEmailAddressNativeNamedParams("qwe@gmail.com");
+
+        LOGGER.info("Students : " + students);
+        System.out.println("Students : " + students);
+    }
+
+    @Test
+    public void updaateStudentNameByEmailId(){
+        studentRepository.updaateStudentNameByEmailId("asdf","qwe@gmail.com");
+    }
+
 
 }

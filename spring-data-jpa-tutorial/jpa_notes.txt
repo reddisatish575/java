@@ -75,3 +75,21 @@ JPA Annotations
     })
 
     -> used to map the columns with DB.
+
+19. @Query
+    -> used to write JPQL Query
+    -> The Query created based on the class, not based on the table we created.
+    -> @Query("select s from Student s where s.emailId = ?1")
+    -> Here Student is Class Name it gets the data from tbl_student and
+        emailId is class attribute and it inserted in the DB as email_address.
+    -> ?1 is representing first parameter we provided in the related method
+20. @Param
+    -> when we have multiple params, then it will be better to use this named params for better understanding
+21. @Modifying
+    -> used to modify the data, it will be used when we update or delete the data
+22. @Transactional
+    -> begin, commit, rollback will automatically done by this annotation
+23. @OneToOne
+    -> used for mapping the table one to one
+24. @JoinColumn()
+    -> used to apply join column between two tables;
